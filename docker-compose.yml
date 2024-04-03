@@ -1,0 +1,10 @@
+version: "3"
+services:
+  pubsub-emulator:
+    build:
+      context: ./pubsub-emulator
+      dockerfile: Dockerfile
+    ports:
+      - "8085:8085"
+    environment:
+      - PUBSUB_EMULATOR_HOST=0.0.0.0:8085
